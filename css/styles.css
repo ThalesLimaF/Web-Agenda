@@ -85,6 +85,11 @@ body {
     font-size: 16px;
     color: #333;
     font-weight: 600;
+   
+}
+
+.login a {
+    text-decoration: none;
 }
 
 .login:hover {
