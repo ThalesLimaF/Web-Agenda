@@ -1,50 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/main.css">
-  <title>Document</title>
+  <title>Web Agenda</title>
 </head>
+
 <body>
 
   <h1 class="titulo"> Web Agenda</h1>
 
   <button class="botao-menu"><i class="fa-solid fa-bars"></i></button>
 
-    <nav class="menu-lateral">
-      <ul>
-        <li><a href="#">
+  <nav class="menu-lateral">
+    <ul>
+      <li><a href="#">
           <i class="fa-solid fa-house"></i> Home</a>
-        </li>
+      </li>
 
-        <li><a href="#">
-        <i class="fa-solid fa-circle-info"></i>
+      <li><a href="#">
+          <i class="fa-solid fa-circle-info"></i>
           Sobre</a>
-        </li>
+      </li>
 
-        <li><a href="#">
-        <i class="fa-solid fa-envelope"></i> 
-         Contato</a>
-        </li>
+      <li><a href="#">
+          <i class="fa-solid fa-envelope"></i>
+          Contato</a>
+      </li>
 
-        <li><a href="#">
+      <li><a href="#">
           <i class="fa-solid fa-gear"></i>
-           Configurações</a>
-        </li>
+          Configurações</a>
+      </li>
 
-        <li class="perfil"><a href="#">
+      <li class="perfil"><a href="#">
           <i class="fa-solid fa-user"></i>
           Perfil</a></li>
-      </ul>
-    </nav>
+    </ul>
+  </nav>
 
-    <main class="conteudo">
+  <main class="conteudo">
 
-    </main>
-</div>
+    <button class="plus"><i class="fa-solid fa-plus"><a href="#"></a></i></button>
+
+
+    <!-- <div class="cards">
+        <div class="top">
+          <button class="editar"><i class="fa-solid fa-pen"></i></button>
+          <h1>título</h1>
+          <button class="remover"><i class="fa-solid fa-trash"></i></button>
+        </div> 
+        <div class="meio">
+          <p>Descrição</p>
+        </div>
+        <div class="baixo">
+          <p>dd/mm/aaaa - dd/mm/aaaa</p>
+          
+        </div>
+      </div>
+      -->
+    <div class="cardForm">
+      <div class="formTop">
+      <h2>Nova Tarefa</h2>
+      <button class="btnFechar"><i class="fa-solid fa-x"></i></button>
+      </div>
+      <div class="tituloForm">
+        <label for="titulo">Título</label>
+        <input type="text" class="tituloInput">
+     </div>
+
+      <div class="descricao">
+        <label for="Descrição">Descrição</label>
+        <input type="text" class="descricaoInput">
+      </div>
+
+      <div class="datas">
+        <div class="inicio">
+          <label for="data">Data início</label>
+          <input type="date" class="inicioInput">
+        </div>
+
+        <div class="fim">
+          <label for="data">Data final</label>
+          <input type="date" class="fimInput">
+        </div>
+      </div>
+      <button class="btnSalvar">Salvar</button>
+      </form>
+    </div>
+  </main>
 </body>
 
-<script src="./JS/main.js"></script>
+<script type="module" src="./JS/main.js"></script>
+<script type="module" src="./JS/cards.js"></script>
+
 </html>

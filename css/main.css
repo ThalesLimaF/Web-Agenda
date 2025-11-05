@@ -10,6 +10,8 @@ body {
     background-color: white;
 }
 
+
+
 .titulo {
     width: 100%;
     background-color: #180f42;
@@ -30,7 +32,7 @@ body {
     padding: 10px 15px;
     cursor: pointer;
     color: white;
-    transition: all 0.5s cubic-bezier(.21,.52,.52,.92);
+    transition: all 0.2s cubic-bezier(.21,.52,.52,.92);
 }
 
 .botao-menu.ativo {
@@ -49,7 +51,7 @@ body {
     z-index: 4;
     color: white;
     box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-    transition: all 0.5s cubic-bezier(.21,.52,.52,.92);
+    transition: all 0.2s cubic-bezier(.21,.52,.52,.92);
 }
 
 .menu-lateral.ativo{
@@ -85,5 +87,200 @@ body {
 
 .conteudo {
    margin-left: 80px; 
+   display: flex;
+   flex-wrap: wrap;
+   gap: 20px;
+   padding: 20px;
 }
 
+.cards{
+    margin: 10px;
+    font-size: 22px;
+    color: black;
+    border: solid black;
+    border-radius: 5px;
+    width: 400px;
+    height: 200px;
+    font-size: 12px;
+    justify-content: space-between;
+    
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25%;
+   
+}
+
+.cards button {
+    background-color: transparent;
+    height: 40px;
+    width: 100px;
+    border: transparent;
+    cursor: pointer;
+}
+
+.meio {
+    display: flex;
+    width: 100%;
+    height: 50%;       
+    font-size: 16px;
+}
+
+.meio p {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.baixo {     
+    padding-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    height: 25%;
+}
+
+button.plus {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #ffffff;      
+  color: #8a6eff;                 
+  border: 2px solid #8a6eff;      
+  border-radius: 50%;             
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25); 
+  transition: all 0.3s ease;                 
+}
+
+.conteudo.plus {
+    justify-content: right;
+}
+
+button.plus:hover {
+  background-color: #8a6eff;  
+  color: white;               
+  transform: scale(1.1);      
+}
+
+button.plus:active {
+  transform: scale(0.95);
+}
+
+.cardForm {
+  display: none; 
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  width: 600px;
+  height: 420px;
+}
+
+.formTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.cardForm input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    padding: 10px;
+    
+}
+
+.cardForm label {
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.cardForm h2 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 5px;
+    padding-left: 230px;
+}
+
+.tituloform input{
+    margin-bottom: 10px;
+}
+
+.descricao input{
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.datas {
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+}
+
+.datas input{
+    height: 8px;
+}
+
+.cardForm.ativo {
+    display: block;
+}
+
+.btnSalvar {
+  background-color: #6c63ff; /* roxo suave (pode ajustar a cor da sua paleta) */
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  width: 100%; /* ou ajuste conforme seu layout */
+  max-width: 200px;
+  margin: 20px auto 0;
+  display: block;
+}
+
+.btnSalvar:hover {
+  background-color: #5a54e8; /* um tom mais escuro no hover */
+  transform: scale(1.03);
+}
+
+.btnSalvar:active {
+  transform: scale(0.97);
+}
+
+.btnFechar {
+  background: none;
+  border: none;
+  font-size: 1.4rem;
+  color: #555;
+  cursor: pointer;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.btnFechar:hover {
+  color: #e74c3c; /* vermelho suave */
+  transform: scale(1.1);
+}
