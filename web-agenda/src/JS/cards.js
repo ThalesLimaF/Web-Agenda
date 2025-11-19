@@ -2,10 +2,8 @@ const conteudo = document.querySelector('.conteudo');
 export const btnSalvar = document.querySelector('.btnSalvar');
 const pesquisaInput = document.querySelector('.pesquisaInput');
 
-// 🔹 Carrega as tarefas do Local Storage
 let tarefas = JSON.parse(localStorage.getItem('tarefas')) || [];
 
-// 🔹 Função para criar um card visualmente
 function criarCard(tarefa) {
   const novoCard = document.createElement('div');
   novoCard.classList.add('cards');
@@ -25,16 +23,13 @@ function criarCard(tarefa) {
   conteudo.appendChild(novoCard);
 }
 
-// 🔹 Função para mostrar todos os cards
 function exibirCards(lista) {
   conteudo.querySelectorAll('.cards').forEach(card => card.remove());
   lista.forEach(criarCard);
 }
 
-// 🔹 Mostra as tarefas salvas ao abrir
 exibirCards(tarefas);
 
-// 🔹 Botão Salvar
 btnSalvar.addEventListener('click', () => {
   const titulo = document.querySelector('.tituloInput').value;
   const descricao = document.querySelector('.descricaoInput').value;
@@ -58,7 +53,6 @@ btnSalvar.addEventListener('click', () => {
   document.querySelector('.fimInput').value = '';
 });
 
-// 🔹 Remover card
 conteudo.addEventListener('click', (e) => {
   const btn = e.target.closest('.remover');
   if (!btn) return;
@@ -75,12 +69,8 @@ conteudo.addEventListener('click', (e) => {
   card.remove();
 });
 
-// 🔹 Filtro com .filter()
 pesquisaInput.addEventListener('input', () => {
   const texto = pesquisaInput.value.toLowerCase();
-
-  // filtra apenas as tarefas cujo título contém o texto digitado
   const filtradas = tarefas.filter(t => t.titulo.toLowerCase().includes(texto));
-
   exibirCards(filtradas);
 });
